@@ -11,26 +11,41 @@
 
 document.getElementById("homemenu").onclick = function() {myFunction()};
 
-function myFunction1() {
+function teachclick() {
     var x = document.getElementById('teach');
 	var y = document.getElementById('homecontent');
+   	var z = document.getElementById('rating');
     y.style.display='none'
 	x.style.display = 'block';
+    z.style.display='none'
 
 }
-function myFunction() {
- var y = document.getElementById('teach');
-	var x = document.getElementById('homecontent');
+
+function ratingclick() {
+    var z = document.getElementById('teach');
+	var y = document.getElementById('homecontent');
+   	var x = document.getElementById('rating');
     y.style.display='none'
 	x.style.display = 'block';
+    z.style.display='none'
 
+}
+
+
+function homeclick() {
+ var y = document.getElementById('teach');
+	var x = document.getElementById('homecontent');
+	var z = document.getElementById('rating');
+    y.style.display='none'
+	x.style.display = 'block';
+	z.style.display= 'none'
 }
 
 </script>
 
 </head>
 
-<body onload="myFunction()">
+<body onload="homeclick">
   <div id="render-target">
   </div>
 
@@ -41,9 +56,9 @@ function myFunction() {
 			<div class="col-lg-12">
 				<span id="teal"> TeaL </span>
 				<ul class="menu">
-					<li class="menuitem"><span id="homemenu" class="list"><span class="glyphicon glyphicon-home"></span></span></li>
-					<li class="menuitem"><span id="teachmenu" class="list" onclick="myFunction1()">Teach</span></li>
-					<li class="menuitem"><span id="ratingmenu" class="list">Rating</span></li>
+					<li class="menuitem"><span id="homemenu" class="list" onclick="homeclick()"><span class="glyphicon glyphicon-home"></span></span></li>
+					<li class="menuitem"><span id="teachmenu" class="list" onclick="teachclick()">Teach</span></li>
+					<li class="menuitem"><span id="ratingmenu" class="list" onclick="ratingclick()">Rating</span></li>
 					<li class="menuitem"><span id="feedbackmenu" class="list">Feedback</span></li>
 				</ul>
 			</div>
@@ -51,7 +66,8 @@ function myFunction() {
 
 		<div class="row align-items-center" id="center">
 			<div class="col-lg-10" id="left">
-				<div id="homecontent" class="container-fluid">
+				<div id="homecontent">
+				<div class="container-fluid">
 						<div id="askaquestion" class="row">
 							<h2>Ask a Question</h2>
 							<form>
@@ -92,7 +108,7 @@ function myFunction() {
 
 
 				</div>
-
+				</div>
 				<!--teach goes here-->
 				<div id="teach">
 						<div class="overlay">
@@ -191,7 +207,62 @@ function myFunction() {
 
 				<!--rating goes here-->
 				<div id="rating">
-					<h2></h2>
+					<h2>Feedback</h2>
+						<form id="rate">
+							<table>
+								<tr>
+									<td> <label for="quest">Question: </label> </td>
+									<td><input type="text" id="quest" name="question"></td>
+								</tr>
+								<tr>
+									<td><label for="tutor">Tutor Name:</label></td>
+									<td><input type="text" id="tutor" name="tname"></td>
+								</tr>
+								<tr>
+									<td><label for="Quality">Quality:</label></td>
+									<td class="clasification">
+										<input id="radio1" type="radio" class="qual" name="rating1" value="5"><label for="radio1">&#9733;</label>
+										<input id="radio2" type="radio" class="qual" name="rating1" value="4"><label for="radio2">&#9733;</label>
+	   									<input id="radio3" type="radio" class="qual" name="rating1" value="3"><label for="radio3">&#9733;</label>
+	   									<input id="radio4" type="radio" class="qual" name="rating1" value="2"><label for="radio4">&#9733;</label>
+	   									<input id="radio5" type="radio" class="qual" name="rating1" value="1"><label for="radio5">&#9733;</label>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="Knowledge">Knowledge:</label></td>
+									<td class="clasification">
+       									<input id="radio6" type="radio" class="knowl" name="rating2" value="5"><label for="radio6">&#9733;</label>
+										<input id="radio7" type="radio" class="knowl" name="rating2" value="4"><label for="radio7">&#9733;</label>
+	   									<input id="radio8" type="radio" class="knowl" name="rating2" value="3"><label for="radio8">&#9733;</label>
+	   									<input id="radio9" type="radio" class="knowl" name="rating2" value="2"><label for="radio9">&#9733;</label>
+										<input id="radio10" type="radio" class="knowl" name="rating2" value="1"><label for="radio10">&#9733;</label>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="Interaction">Class Interaction:</label></td>
+									<td class="clasification">
+										<input id="radio11" type="radio" class="interact" name="rating3" value="5"><label for="radio11">&#9733;</label>
+										<input id="radio12" type="radio" class="interact" name="rating3" value="4"><label for="radio12">&#9733;</label>
+										<input id="radio13" type="radio" class="interact" name="rating3" value="3"><label for="radio13">&#9733;</label>
+	   									<input id="radio14" type="radio" class="interact" name="rating3" value="2"><label for="radio14">&#9733;</label>
+	   									<input id="radio15" type="radio" class="interact" name="rating3" value="1"><label for="radio15">&#9733;</label>
+   							 		</td>
+								</tr>
+								<tr>
+									<td><label for="Overall">Overall Experience:</label></td>
+									<td class="clasification">
+										<input id="radio16" type="radio" class="overall" name="rating4" value="5"><label for="radio16">&#9733;</label>
+	   									<input id="radio17" type="radio" class="overall" name="rating4" value="4"><label for="radio17">&#9733;</label>
+	   									<input id="radio18" type="radio" class="overall" name="rating4" value="3"><label for="radio18">&#9733;</label>
+										<input id="radio19" type="radio" class="overall" name="rating4" value="2"><label for="radio19">&#9733;</label>
+										<input id="radio20" type="radio" class="overall" name="rating4" value="1"><label for="radio20">&#9733;</label>
+    								</td>
+								</tr>
+							</table>
+							<input type="submit" value="Submit"> <br /> <br />
+							<h4>Wanna endorse Tutor in LinkedIn <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <a href="https://www.linkedin.com/in/mukesh-kumar-g-s-b7307262/" class="fa fa-linkedin" target="_blank" title="LinkedIn"></a></h4>
+						</form>
+
 				</div>
 
 				<!--feedback goes here-->

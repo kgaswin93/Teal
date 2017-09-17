@@ -119,10 +119,67 @@ form{
 
 td{
 	padding: 10px !important;
+	text-align:left !important;
 }
 
 
 h6{
 padding-left: 10px !important;
 color: #34495E !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="radio"] {
+  display: none !important;
+}
+
+
+.clasification {
+  direction: rtl !important;
+  unicode-bidi: bidi-override !important;
+
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange !important;
+}
+#a{
+	width: 20px;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange !important;
+}
+
+.fa {
+  padding: 10px !important;
+  font-size: 10px !important;
+  width: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  margin: 5px 2px !important;
+}
+
+.fa:hover {
+    opacity: 0.7 !important;
+}
+.fa-linkedin {
+  background: #007bb5 !important;
+  color: white !important;
+}
+
+
+h4{
+	padding: 10px;
 }
