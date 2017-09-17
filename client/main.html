@@ -1,7 +1,215 @@
 <head>
   <title>TeaL</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="bootstrap\js\bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap\css\bootstrap-grid.css" />
+	<link rel="stylesheet" type="text/css" href="custom.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+
+document.getElementById("homemenu").onclick = function() {myFunction()};
+
+function myFunction1() {
+    var x = document.getElementById('teach');
+	var y = document.getElementById('homecontent');
+    y.style.display='none'
+	x.style.display = 'block';
+
+}
+function myFunction() {
+ var y = document.getElementById('teach');
+	var x = document.getElementById('homecontent');
+    y.style.display='none'
+	x.style.display = 'block';
+
+}
+
+</script>
+
 </head>
 
-<body>
-  <div id="render-target"></div>
+<body onload="myFunction()">
+  <div id="render-target">
+  </div>
+
+<!--my code-->
+
+	<div class="container-fluid">
+		<div class="row align-items-start" id="header">
+			<div class="col-lg-12">
+				<span id="teal"> TeaL </span>
+				<ul class="menu">
+					<li class="menuitem"><span id="homemenu" class="list"><span class="glyphicon glyphicon-home"></span></span></li>
+					<li class="menuitem"><span id="teachmenu" class="list" onclick="myFunction1()">Teach</span></li>
+					<li class="menuitem"><span id="ratingmenu" class="list">Rating</span></li>
+					<li class="menuitem"><span id="feedbackmenu" class="list">Feedback</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row align-items-center" id="center">
+			<div class="col-lg-10" id="left">
+				<div id="homecontent" class="container-fluid">
+						<div id="askaquestion" class="row">
+							<h2>Ask a Question</h2>
+							<form>
+								<table>
+									<tr>
+										<td><label for="question">Question:</label></td>
+										<td><input type="text" name="question" id="question"></td>
+									</tr>
+									<tr>
+										<td><label for="tags">Tags:</label></td>
+										<td><input type="text" name="tags" id="tags"></td>
+									</tr>
+									<tr>
+										<td><label for="course">Course:</label></td>
+										<td><select name="course" id="course"></select></td>
+									</tr>
+									<tr>
+										<td><label for="section">Section:</label></td>
+										<td><select name="section" id="section"></select></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<hr />
+						<div id="attendingclass" class="row">
+						<h2>Attending Classes</h2>
+						</div>
+						<hr />
+						<div id="posts" class="row">
+						<h2>Existing Questions</h2>
+							<textarea rows='6' cols='200'>
+
+							</textarea>
+							<h5><i id="up_vote" class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;0</h5>
+
+
+						</div>
+
+
+				</div>
+
+				<!--teach goes here-->
+				<div id="teach">
+						<div class="overlay">
+							<h2>Teachers</h2>
+				<div class = "dropdown">
+					<div class = "btn-group">
+						<button class = "btn btn-primary dropdown-toggle" type = "button" data-toggle = "dropdown">
+						<i class="glyphicon glyphicon-filter"></i>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href='#'>Algorithm</a></li>
+							<li><a href='#'>Database Design</a></li>
+							<li><a href='#'>Semantic Web</a></li>
+						</ul>
+					</div>
+					<div class = btn-group>
+						<button class = "btn btn-default dropdown-toggle" type = "button" data-toggle = "dropdown">
+						<i class="glyphicon glyphicon-sort"></i>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href='#'>time</a></li>
+							<li><a href='#'>upvotes</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- <div id ="result" class="collapse"> -->
+				<div id ="result">
+					<div class="container">
+						<hgroup class="mb20">
+							<h1>Search Results</h1>
+							<h2 class="lead"><strong class="text-danger">3</strong> results were found for the search for <strong class="text-danger">Lorem</strong></h2>
+						</hgroup>
+
+					    <section class="col-xs-12 col-sm-6 col-md-12">
+							<article class="search-result row">
+								<!-- <div class="col-xs-12 col-sm-12 col-md-3">
+									<a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum" /></a>
+								</div> -->
+								<div class="col-xs-12 col-sm-12 col-md-6">
+
+									<h3><a href="#" title="">Voluptatem, exercitationem, suscipit, distinctio</a></h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit, distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus doloremque.</p>
+									<h5><i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;2&nbsp;&nbsp;
+									<span class="label label-default">Algorithm</span>
+									<span class="label label-default">Database Design</span>
+									</h5>
+
+					               <!--  <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span> -->
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-3 excerpet">
+									<ul class="meta-search">
+										<li><i class="glyphicon glyphicon-calendar"></i> <span>02/15/2014</span></li>
+										<li><i class="glyphicon glyphicon-time"></i> <span>4:28 pm</span></li>
+									</ul>
+								</div>
+
+							</article>
+						</section>
+
+						<div>
+							<nav aria-label="Search Results Pages">
+							  <ul class="pagination">
+							    <li class="page-item disabled">
+							      <a class="page-link" href="#" aria-label="Previous">
+							        <span aria-hidden="true">&laquo;</span>
+							        <span class="sr-only">Previous</span>
+							      </a>
+							    </li>
+							    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item">
+							      <a class="page-link" href="#" aria-label="Next">
+							        <span aria-hidden="true">&raquo;</span>
+							        <span class="sr-only">Next</span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div>
+					</div>
+
+
+
+				</div>
+				<!-- <p> Search for the topic </p>
+				<div class="btn-group">
+					<input type="text" class="form-control" placeholder="Search" name="search">
+				      <div class="input-group-btn">
+				        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				      </div>
+				</div>      -->
+   				</div>
+				</div>
+
+
+				<!--rating goes here-->
+				<div id="rating">
+					<h2></h2>
+				</div>
+
+				<!--feedback goes here-->
+				<div id="feedback">
+					<h2></h2>
+				</div>
+
+
+			</div>
+			<div class="col-lg-2" id="right">
+
+			</div>
+		</div>
+		<div class="row align-items-bottom" id="footer">
+			<div class="col-lg-12">
+				Learn, Teach and Grow
+			</div>
+		</div>
+	</div>
+
 </body>

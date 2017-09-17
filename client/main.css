@@ -1,1 +1,128 @@
 /* CSS declarations go here */
+body{
+	font-size: large !important;
+}
+
+#header{
+	background-color: #008080 !important;
+	color: white !important;
+	height: 10% !important;
+}
+
+#footer
+{
+	background-color: #008080 !important;
+	height: 9% !important;
+	text-align: center !important;
+	color: #D0D3D4 !important;
+	padding: 10px !important;
+}
+
+#teal{
+	font-family: "Bradley Hand ITC" !important;
+	float: left !important;
+	font-size: 250% !important;
+	padding: 10px !important;
+	font-weight: bolder !important;
+}
+
+.menuitem {
+	float: right !important;
+    display: inline-block !important;
+    padding: 10px !important;
+}
+
+#center, #teach{
+height: 80% !important;
+width: 100% !important;
+}
+
+#up_vote{
+	cursor: pointer !important;
+}
+
+#right{
+	background-color: #76D7C4 !important;
+  width: 100% !important;
+  margin-right: 0 !important;
+  float: right !important;
+}
+
+#left{
+	overflow: scroll !important;
+	padding: 8px !important;
+	border-left-style: solid !important;
+	border-right-style: solid !important;
+	color: #5D6D7E !important;
+	text-align: justify !important;
+}
+
+
+
+html, body,#right,#left, .container-fluid{
+	height: 100% !important;
+}
+
+.menu {
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.menuitem a{
+	color: #D0D3D4 !important;
+	text-decoration: none !important;
+}
+
+.menuitem span{
+	color: #D0D3D4 !important;
+	text-decoration: none !important;
+}
+
+
+.menuitem a:hover {
+    color: white !important;
+}
+
+.menuitem span:hover {
+	cursor: pointer !important;
+    color: white !important;
+}
+
+
+h2{
+	paddding-bottom:5px !important;
+	width: 100% !important;
+	color:#2E4053 !important;
+}
+
+input, select{
+	width: 300px !important;
+}
+
+textarea{
+	padding: 10px !important;
+}
+
+hr{
+	width:100% !important;
+}
+
+select{
+	height: 30px !important;
+}
+
+form{
+	padding: 10px !important;
+}
+
+td{
+	padding: 10px !important;
+}
+
+
+h6{
+padding-left: 10px !important;
+color: #34495E !important;
+}
